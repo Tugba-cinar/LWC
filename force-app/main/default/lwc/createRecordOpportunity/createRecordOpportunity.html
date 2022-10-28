@@ -1,0 +1,46 @@
+<template>
+    <lightning-card title="CREATE RECORD - OPPORTUNITY" icon-name="standard:opportunity">
+        <div class="slds-var-m-around_medium">
+            <form class="opportunity">
+                    <lightning-input
+                        type="text"
+                        label="Opportunity Name"
+                        name="Name"
+                        onchange={changeHandler}>
+                    </lightning-input>
+                    <lightning-combobox
+                        label="Stage Name"
+                        name="StageName"
+                        options={stageOptions}
+                        value={selectedStageName}
+                        onchange={changeHandler}>
+                    </lightning-combobox>
+                    <lightning-input
+                        type="text"
+                        label="Amount"
+                        name="Amount"
+                        onchange={changeHandler}>
+                    </lightning-input>
+                    <lightning-input
+                        type="date"
+                        label="Close Date"
+                        name="CloseDate"
+                        onchange={changeHandler}>
+                    </lightning-input>
+                <div class="slds-align_absolute-center slds-var-m-top_small">
+                    <lightning-button
+                        label="Create Opportunity"
+                        variant="brand"
+                        onclick={createOpportunity}
+                        class="slds-var-m-right_x-small">
+                    </lightning-button>
+                    <lightning-button
+                        label="Cancel"
+                        type="reset"
+                        variant="neutral">
+                    </lightning-button>
+                </div>
+            </form>
+        </div>
+    </lightning-card>
+</template>

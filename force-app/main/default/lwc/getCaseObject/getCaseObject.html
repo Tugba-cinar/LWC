@@ -1,0 +1,12 @@
+<template>
+    <lightning-card title="GET CASE RECORD" icon-name="standard:case">
+        <div class="slds-m-around_medium">
+          <template if:true={case}>
+            CaseNumber: {case.fields.CaseNumber.value} <br/>
+            Subject: {case.fields.Case.Subject.value} <br/>
+            Status: {case.fields.Status.value} <br/>
+            Priority: {case.fields.Priority.value}
+          </template>
+        </div>
+    </lightning-card>
+</template>
